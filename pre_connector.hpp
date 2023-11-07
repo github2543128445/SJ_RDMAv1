@@ -9,7 +9,6 @@
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
-
 #include <map>
 
 namespace rdmaio {

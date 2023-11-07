@@ -1,0 +1,2 @@
+/usr/bin/ar qc librdma.a  
+/usr/bin/ranlib librdma.a
