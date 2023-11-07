@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
     // create the RC qp to access remote server's memory, using the previous registered memory
     MemoryAttr local_mr = c->get_local_mr(local_mr_id);
-    RCQP *qp = c->create_rc_qp(create_rc_idx(1,0), c->get_device(), &local_mr);
+    RCQP *qp = c->create_rc_qp(create_rc_idx(2,0), c->get_device(), &local_mr);
     qp->bind_remote_mr(remote_mr); // bind to the previous allocated mr
 
     while(qp->connect(remote_ip,server_port) != SUCC)  {

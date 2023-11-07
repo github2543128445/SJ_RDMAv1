@@ -18,6 +18,7 @@ typedef struct {
 
 // some macros for easy computer QP idx, since some use default values
 constexpr QPIdx create_rc_idx(int nid,int wid) {
+  //设定了qp的连接号和任务号。经过测试，必须收发两端的两个号必须完全一样才能进行通信
   return QPIdx {
     .node_id   = nid,
     .worker_id = wid,

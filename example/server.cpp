@@ -30,10 +30,11 @@ int main(int argc, char *argv[])
     memcpy(buffer, s, strlen(s));
 
     MemoryAttr local_mr = c->get_local_mr(local_mr_id);
-    RCQP *qp = c->create_rc_qp(create_rc_idx(1,0), c->get_device(), &local_mr);//明天再说
+    RCQP *qp = c->create_rc_qp(create_rc_idx(2,0), c->get_device(), &local_mr);//用qp ID，设备，本地MR创建一个可靠连接QP
+    //create_rc_idx，设定了qp的连接号和任务号。经过测试，必须收发两端的两个号必须完全一样才能进行通信
 
     // server also needs to "connect" clinet.
-    while(qp->connect(remote_ip, client_port, create_rc_idx(1,0)) != SUCC)  {//该过程仅仅是为了可靠连接传输进行的SEND&RCEV
+    while(qp->connect(remote_ip, client_port, create_rc_idx(2,0)) != SUCC)  {//该过程仅仅是为了可靠连接传输进行的SEND&RCEV
         usleep(2000);
     }
 
