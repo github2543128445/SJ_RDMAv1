@@ -45,6 +45,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/RC_WRITE_client.dir/DependInfo.cmake"
+  "CMakeFiles/RC_WRITE_server.dir/DependInfo.cmake"
   "CMakeFiles/RC_READ_server.dir/DependInfo.cmake"
   "CMakeFiles/RC_READ_client.dir/DependInfo.cmake"
   "CMakeFiles/client.dir/DependInfo.cmake"

@@ -25,9 +25,13 @@ add_executable(server "example/server.cpp")
 add_executable(client "example/client.cpp")
 add_executable(RC_READ_client "RC_READ/client.cpp")
 add_executable(RC_READ_server "RC_READ/server.cpp")
+add_executable(RC_WRITE_client "RC_WRITE/client.cpp")
+add_executable(RC_WRITE_server "RC_WRITE/server.cpp")
 
 target_link_libraries(server rdma)
 target_link_libraries(client rdma)
 target_link_libraries(RC_READ_client rdma)
 target_link_libraries(RC_READ_server rdma)
+target_link_libraries(RC_WRITE_client rdma)
+target_link_libraries(RC_WRITE_server rdma)
 

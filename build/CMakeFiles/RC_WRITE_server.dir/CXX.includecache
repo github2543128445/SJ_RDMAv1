@@ -90,9 +90,9 @@ vector
 logging.hpp
 ../logging.hpp
 
-/home/kvgroup/louzy/SJ_RDMA/rlib/RC_READ/server.cpp
+/home/kvgroup/louzy/SJ_RDMA/rlib/RC_WRITE/server.cpp
 rdma_ctrl.hpp
-/home/kvgroup/louzy/SJ_RDMA/rlib/RC_READ/rdma_ctrl.hpp
+/home/kvgroup/louzy/SJ_RDMA/rlib/RC_WRITE/rdma_ctrl.hpp
 stdio.h
 -
 string.h

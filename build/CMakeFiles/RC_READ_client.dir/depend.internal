@@ -5,6 +5,7 @@ CMakeFiles/RC_READ_client.dir/RC_READ/client.cpp.o
  ../common.hpp
  ../logging.hpp
  ../mr.hpp
+ ../my_impl.hpp
  ../pre_connector.hpp
  ../qp.hpp
  ../qp_impl.hpp

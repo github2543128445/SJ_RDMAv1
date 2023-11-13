@@ -28,6 +28,8 @@ infiniband/verbs.h
 logging.hpp
 ../logging.hpp
 
+../my_impl.hpp
+
 ../pre_connector.hpp
 logging.hpp
 ../logging.hpp
@@ -67,6 +69,8 @@ functional
 -
 qp.hpp
 ../qp.hpp
+my_impl.hpp
+../my_impl.hpp
 rdma_ctrl_impl.hpp
 ../rdma_ctrl_impl.hpp
 

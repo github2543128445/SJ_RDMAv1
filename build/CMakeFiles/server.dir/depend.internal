@@ -5,6 +5,7 @@ CMakeFiles/server.dir/example/server.cpp.o
  ../common.hpp
  ../logging.hpp
  ../mr.hpp
+ ../my_impl.hpp
  ../pre_connector.hpp
  ../qp.hpp
  ../qp_impl.hpp

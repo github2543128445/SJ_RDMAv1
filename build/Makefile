@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named RC_WRITE_client
+
+# Build rule for target.
+RC_WRITE_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RC_WRITE_client
+.PHONY : RC_WRITE_client
+
+# fast build rule for target.
+RC_WRITE_client/fast:
+	$(MAKE) -f CMakeFiles/RC_WRITE_client.dir/build.make CMakeFiles/RC_WRITE_client.dir/build
+.PHONY : RC_WRITE_client/fast
+
+#=============================================================================
+# Target rules for targets named RC_WRITE_server
+
+# Build rule for target.
+RC_WRITE_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RC_WRITE_server
+.PHONY : RC_WRITE_server
+
+# fast build rule for target.
+RC_WRITE_server/fast:
+	$(MAKE) -f CMakeFiles/RC_WRITE_server.dir/build.make CMakeFiles/RC_WRITE_server.dir/build
+.PHONY : RC_WRITE_server/fast
+
+#=============================================================================
 # Target rules for targets named RC_READ_server
 
 # Build rule for target.
@@ -229,6 +255,60 @@ RC_READ/server.cpp.s:
 	$(MAKE) -f CMakeFiles/RC_READ_server.dir/build.make CMakeFiles/RC_READ_server.dir/RC_READ/server.cpp.s
 .PHONY : RC_READ/server.cpp.s
 
+RC_WRITE/client.o: RC_WRITE/client.cpp.o
+
+.PHONY : RC_WRITE/client.o
+
+# target to build an object file
+RC_WRITE/client.cpp.o:
+	$(MAKE) -f CMakeFiles/RC_WRITE_client.dir/build.make CMakeFiles/RC_WRITE_client.dir/RC_WRITE/client.cpp.o
+.PHONY : RC_WRITE/client.cpp.o
+
+RC_WRITE/client.i: RC_WRITE/client.cpp.i
+
+.PHONY : RC_WRITE/client.i
+
+# target to preprocess a source file
+RC_WRITE/client.cpp.i:
+	$(MAKE) -f CMakeFiles/RC_WRITE_client.dir/build.make CMakeFiles/RC_WRITE_client.dir/RC_WRITE/client.cpp.i
+.PHONY : RC_WRITE/client.cpp.i
+
+RC_WRITE/client.s: RC_WRITE/client.cpp.s
+
+.PHONY : RC_WRITE/client.s
+
+# target to generate assembly for a file
+RC_WRITE/client.cpp.s:
+	$(MAKE) -f CMakeFiles/RC_WRITE_client.dir/build.make CMakeFiles/RC_WRITE_client.dir/RC_WRITE/client.cpp.s
+.PHONY : RC_WRITE/client.cpp.s
+
+RC_WRITE/server.o: RC_WRITE/server.cpp.o
+
+.PHONY : RC_WRITE/server.o
+
+# target to build an object file
+RC_WRITE/server.cpp.o:
+	$(MAKE) -f CMakeFiles/RC_WRITE_server.dir/build.make CMakeFiles/RC_WRITE_server.dir/RC_WRITE/server.cpp.o
+.PHONY : RC_WRITE/server.cpp.o
+
+RC_WRITE/server.i: RC_WRITE/server.cpp.i
+
+.PHONY : RC_WRITE/server.i
+
+# target to preprocess a source file
+RC_WRITE/server.cpp.i:
+	$(MAKE) -f CMakeFiles/RC_WRITE_server.dir/build.make CMakeFiles/RC_WRITE_server.dir/RC_WRITE/server.cpp.i
+.PHONY : RC_WRITE/server.cpp.i
+
+RC_WRITE/server.s: RC_WRITE/server.cpp.s
+
+.PHONY : RC_WRITE/server.s
+
+# target to generate assembly for a file
+RC_WRITE/server.cpp.s:
+	$(MAKE) -f CMakeFiles/RC_WRITE_server.dir/build.make CMakeFiles/RC_WRITE_server.dir/RC_WRITE/server.cpp.s
+.PHONY : RC_WRITE/server.cpp.s
+
 example/client.o: example/client.cpp.o
 
 .PHONY : example/client.o
@@ -290,6 +370,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... RC_WRITE_client"
+	@echo "... RC_WRITE_server"
 	@echo "... RC_READ_server"
 	@echo "... rebuild_cache"
 	@echo "... RC_READ_client"
@@ -302,6 +384,12 @@ help:
 	@echo "... RC_READ/server.o"
 	@echo "... RC_READ/server.i"
 	@echo "... RC_READ/server.s"
+	@echo "... RC_WRITE/client.o"
+	@echo "... RC_WRITE/client.i"
+	@echo "... RC_WRITE/client.s"
+	@echo "... RC_WRITE/server.o"
+	@echo "... RC_WRITE/server.i"
+	@echo "... RC_WRITE/server.s"
 	@echo "... example/client.o"
 	@echo "... example/client.i"
 	@echo "... example/client.s"

@@ -1,0 +1,1 @@
+/usr/bin/g++   -g  -rdynamic CMakeFiles/RC_WRITE_client.dir/RC_WRITE/client.cpp.o  -o RC_WRITE_client  librdma.a -lpthread -libverbs ../ralloc/libssmalloc.a 
