@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/kvgroup/louzy/SJ_RDMA/rlib/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named RC_READ_server
+
+# Build rule for target.
+RC_READ_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RC_READ_server
+.PHONY : RC_READ_server
+
+# fast build rule for target.
+RC_READ_server/fast:
+	$(MAKE) -f CMakeFiles/RC_READ_server.dir/build.make CMakeFiles/RC_READ_server.dir/build
+.PHONY : RC_READ_server/fast
+
+#=============================================================================
+# Target rules for targets named RC_READ_client
+
+# Build rule for target.
+RC_READ_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RC_READ_client
+.PHONY : RC_READ_client
+
+# fast build rule for target.
+RC_READ_client/fast:
+	$(MAKE) -f CMakeFiles/RC_READ_client.dir/build.make CMakeFiles/RC_READ_client.dir/build
+.PHONY : RC_READ_client/fast
 
 #=============================================================================
 # Target rules for targets named client
@@ -148,6 +174,60 @@ rdma: cmake_check_build_system
 rdma/fast:
 	$(MAKE) -f CMakeFiles/rdma.dir/build.make CMakeFiles/rdma.dir/build
 .PHONY : rdma/fast
+
+RC_READ/client.o: RC_READ/client.cpp.o
+
+.PHONY : RC_READ/client.o
+
+# target to build an object file
+RC_READ/client.cpp.o:
+	$(MAKE) -f CMakeFiles/RC_READ_client.dir/build.make CMakeFiles/RC_READ_client.dir/RC_READ/client.cpp.o
+.PHONY : RC_READ/client.cpp.o
+
+RC_READ/client.i: RC_READ/client.cpp.i
+
+.PHONY : RC_READ/client.i
+
+# target to preprocess a source file
+RC_READ/client.cpp.i:
+	$(MAKE) -f CMakeFiles/RC_READ_client.dir/build.make CMakeFiles/RC_READ_client.dir/RC_READ/client.cpp.i
+.PHONY : RC_READ/client.cpp.i
+
+RC_READ/client.s: RC_READ/client.cpp.s
+
+.PHONY : RC_READ/client.s
+
+# target to generate assembly for a file
+RC_READ/client.cpp.s:
+	$(MAKE) -f CMakeFiles/RC_READ_client.dir/build.make CMakeFiles/RC_READ_client.dir/RC_READ/client.cpp.s
+.PHONY : RC_READ/client.cpp.s
+
+RC_READ/server.o: RC_READ/server.cpp.o
+
+.PHONY : RC_READ/server.o
+
+# target to build an object file
+RC_READ/server.cpp.o:
+	$(MAKE) -f CMakeFiles/RC_READ_server.dir/build.make CMakeFiles/RC_READ_server.dir/RC_READ/server.cpp.o
+.PHONY : RC_READ/server.cpp.o
+
+RC_READ/server.i: RC_READ/server.cpp.i
+
+.PHONY : RC_READ/server.i
+
+# target to preprocess a source file
+RC_READ/server.cpp.i:
+	$(MAKE) -f CMakeFiles/RC_READ_server.dir/build.make CMakeFiles/RC_READ_server.dir/RC_READ/server.cpp.i
+.PHONY : RC_READ/server.cpp.i
+
+RC_READ/server.s: RC_READ/server.cpp.s
+
+.PHONY : RC_READ/server.s
+
+# target to generate assembly for a file
+RC_READ/server.cpp.s:
+	$(MAKE) -f CMakeFiles/RC_READ_server.dir/build.make CMakeFiles/RC_READ_server.dir/RC_READ/server.cpp.s
+.PHONY : RC_READ/server.cpp.s
 
 example/client.o: example/client.cpp.o
 
@@ -209,11 +289,19 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... RC_READ_server"
+	@echo "... rebuild_cache"
+	@echo "... RC_READ_client"
 	@echo "... client"
 	@echo "... server"
 	@echo "... rdma"
+	@echo "... RC_READ/client.o"
+	@echo "... RC_READ/client.i"
+	@echo "... RC_READ/client.s"
+	@echo "... RC_READ/server.o"
+	@echo "... RC_READ/server.i"
+	@echo "... RC_READ/server.s"
 	@echo "... example/client.o"
 	@echo "... example/client.i"
 	@echo "... example/client.s"

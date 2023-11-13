@@ -1,0 +1,1 @@
+/usr/bin/g++   -g  -rdynamic CMakeFiles/RC_READ_server.dir/RC_READ/server.cpp.o  -o RC_READ_server  librdma.a -lpthread -libverbs ../ralloc/libssmalloc.a 

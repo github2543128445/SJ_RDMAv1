@@ -47,7 +47,7 @@ class RdmaCtrl {
    * The get_device returns previously opened device of this thread, if it is already opened
    */
   RNicHandler *open_thread_local_device(DevIdx idx);
-
+  //上会调用下
   RNicHandler *open_device(DevIdx idx);
 
   RNicHandler *get_device();
@@ -55,7 +55,7 @@ class RdmaCtrl {
   /**
    * The *callback* is called once a QP connection request is sent to this server
    */
-  void register_qp_callback(connection_callback_t callback);
+  void register_qp_callback(connection_callback_t callback);//不知道干啥的，整个项目里没调用
 
   void close_device();
 

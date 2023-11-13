@@ -53,6 +53,8 @@ CMAKE_BINARY_DIR = /home/kvgroup/louzy/SJ_RDMA/rlib/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/RC_READ_server.dir/all
+all: CMakeFiles/RC_READ_client.dir/all
 all: CMakeFiles/client.dir/all
 all: CMakeFiles/server.dir/all
 all: CMakeFiles/rdma.dir/all
@@ -65,11 +67,67 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/RC_READ_server.dir/clean
+clean: CMakeFiles/RC_READ_client.dir/clean
 clean: CMakeFiles/client.dir/clean
 clean: CMakeFiles/server.dir/clean
 clean: CMakeFiles/rdma.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/RC_READ_server.dir
+
+# All Build rule for target.
+CMakeFiles/RC_READ_server.dir/all: CMakeFiles/rdma.dir/all
+	$(MAKE) -f CMakeFiles/RC_READ_server.dir/build.make CMakeFiles/RC_READ_server.dir/depend
+	$(MAKE) -f CMakeFiles/RC_READ_server.dir/build.make CMakeFiles/RC_READ_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles --progress-num=3,4 "Built target RC_READ_server"
+.PHONY : CMakeFiles/RC_READ_server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/RC_READ_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/RC_READ_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles 0
+.PHONY : CMakeFiles/RC_READ_server.dir/rule
+
+# Convenience name for target.
+RC_READ_server: CMakeFiles/RC_READ_server.dir/rule
+
+.PHONY : RC_READ_server
+
+# clean rule for target.
+CMakeFiles/RC_READ_server.dir/clean:
+	$(MAKE) -f CMakeFiles/RC_READ_server.dir/build.make CMakeFiles/RC_READ_server.dir/clean
+.PHONY : CMakeFiles/RC_READ_server.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/RC_READ_client.dir
+
+# All Build rule for target.
+CMakeFiles/RC_READ_client.dir/all: CMakeFiles/rdma.dir/all
+	$(MAKE) -f CMakeFiles/RC_READ_client.dir/build.make CMakeFiles/RC_READ_client.dir/depend
+	$(MAKE) -f CMakeFiles/RC_READ_client.dir/build.make CMakeFiles/RC_READ_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles --progress-num=1,2 "Built target RC_READ_client"
+.PHONY : CMakeFiles/RC_READ_client.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/RC_READ_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/RC_READ_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles 0
+.PHONY : CMakeFiles/RC_READ_client.dir/rule
+
+# Convenience name for target.
+RC_READ_client: CMakeFiles/RC_READ_client.dir/rule
+
+.PHONY : RC_READ_client
+
+# clean rule for target.
+CMakeFiles/RC_READ_client.dir/clean:
+	$(MAKE) -f CMakeFiles/RC_READ_client.dir/build.make CMakeFiles/RC_READ_client.dir/clean
+.PHONY : CMakeFiles/RC_READ_client.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/client.dir
@@ -78,7 +136,7 @@ clean: CMakeFiles/rdma.dir/clean
 CMakeFiles/client.dir/all: CMakeFiles/rdma.dir/all
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/depend
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles --progress-num=1,2 "Built target client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles --progress-num=5,6 "Built target client"
 .PHONY : CMakeFiles/client.dir/all
 
 # Build rule for subdir invocation for target.
@@ -105,7 +163,7 @@ CMakeFiles/client.dir/clean:
 CMakeFiles/server.dir/all: CMakeFiles/rdma.dir/all
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles --progress-num=4,5 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles --progress-num=8,9 "Built target server"
 .PHONY : CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -132,7 +190,7 @@ CMakeFiles/server.dir/clean:
 CMakeFiles/rdma.dir/all:
 	$(MAKE) -f CMakeFiles/rdma.dir/build.make CMakeFiles/rdma.dir/depend
 	$(MAKE) -f CMakeFiles/rdma.dir/build.make CMakeFiles/rdma.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles --progress-num=3 "Built target rdma"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles --progress-num=7 "Built target rdma"
 .PHONY : CMakeFiles/rdma.dir/all
 
 # Build rule for subdir invocation for target.

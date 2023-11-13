@@ -8,7 +8,7 @@
  * Note, RDMA usually uses some other communication method (e.g. TCP/IP) to exchange QP informations.
  * RLib uses TCP for the pre-communication.
  */
-int server_node_id = 1;
+int server_node_id = 8;//实际上可以任意指定
 int tcp_port       = 17621;
 int client_port    = 17620; //remote port
 const char* remote_ip = "10.0.0.62";

@@ -236,7 +236,11 @@ class RRCQP : public QP {
                        uint64_t wr_id = 0, uint32_t imm = 0) {
     return post_send_to_mr(local_mr_,remote_mr_,op,local_buf,len,off,flags,wr_id,imm);
   }
-
+// IBV_SEND_FENCE：指示发送操作是一个栅栏操作，用于确保之前的发送操作已经完成
+// IBV_SEND_SIGNALED：指示发送操作完成后通知接收方
+// IBV_SEND_SOLICITED：指示发送操作是由接收方请求的
+// IBV_SEND_INLINE：指示数据可以直接内联到发送操作中，而不需要额外的缓冲区
+// IBV_SEND_IP_CSUM：指示发送操作需要进行IP校验和计算
   // one-sided atomic operations
   ConnStatus post_cas(char *local_buf,uint64_t off,
                       uint64_t compare,uint64_t swap,int flags,uint64_t wr_id = 0) {

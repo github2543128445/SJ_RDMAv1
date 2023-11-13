@@ -1,0 +1,1 @@
+/usr/bin/g++   -g  -rdynamic CMakeFiles/try.dir/try/A.cpp.o  -o try  librdma.a -lpthread -libverbs ../ralloc/libssmalloc.a 

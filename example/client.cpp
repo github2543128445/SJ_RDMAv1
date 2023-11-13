@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-int client_node_id = 0;
+int client_node_id = 12;//实际上可以任意指定
 int tcp_port       = 17620;
 int server_port = 17621;
 const char* remote_ip = "10.0.0.61";

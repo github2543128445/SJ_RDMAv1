@@ -1,5 +1,7 @@
-/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles/rebuild_cache.dir
 /home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles/edit_cache.dir
+/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles/RC_READ_server.dir
+/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles/rebuild_cache.dir
+/home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles/RC_READ_client.dir
 /home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles/client.dir
 /home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles/server.dir
 /home/kvgroup/louzy/SJ_RDMA/rlib/build/CMakeFiles/rdma.dir
